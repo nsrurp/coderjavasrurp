@@ -1,13 +1,29 @@
-let datoIngresado = prompt('Por favor ingrese su edad')
 
-if (datoIngresado >= 18) {
+let nombreDelCurso = "agregarAlCarrito";
 
-    for (let i = 1; i <= datoIngresado; i++) {
+agregarAlCarrito('popular item', 2);
+agregarAlCarrito('fancy product', 20);
+agregarAlCarrito('Special Item', 23);
+agregarAlCarrito('Popular Item',120);
+agregarAlCarrito('Sale Item',20);
+agregarAlCarrito ('Popular Item', 3);
+agregarAlCarrito ('Sale Item', 3);
+agregarAlCarrito ('Special Item', 1);
 
-        alert('Este es el mensaje ' + i)
-
+function agregarAlCarrito(producto, stock) {
+    const tenemosStock = validarStock(stock);
+    if(tenemosStock === 'Tenemos stock'){
+        console.log('Agregas el producto al carrito: ' + producto);
+    }else{
+        console.log('No hay mas disponibilidad');
     }
 }
-else {
-    alert('este sitio es para mayores de edad :(')
+
+function validarStock(stockDelProducto) {
+    if(stockDelProducto > 0){
+        return 'Tenemos stock';
+    }else{
+        return 'No tenemos stock';
+    }
 }
+
