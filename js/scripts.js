@@ -27,3 +27,17 @@ function validarStock(stockDelProducto) {
     }
 }
 
+'fancy product',20
+let Opciones = "talles"
+
+talles('39', 7);
+talles('40', 5);
+talles('41', 8);
+talles('42', 0);
+function talles (cantidadTalle) {
+    if(talles > 0){
+        return 'Hay talle';
+    }else{ 
+        return 'No hay talle'
+    }
+}
